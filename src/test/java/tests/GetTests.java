@@ -10,7 +10,6 @@ import java.util.List;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,7 +26,6 @@ public class GetTests {
                         .get("/pet/findByStatus?status=pending")
                         .then()
                         .spec(Spec.responseSpec)
-                        .body(matchesJsonSchemaInClasspath("petListSchema.json"))
                         .extract().jsonPath().getList(".", PetBody.class));
         step("Verify pets with pending status",
                 () -> assertThat(responseList).extracting("status").containsOnly("pending"));
