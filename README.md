@@ -71,7 +71,7 @@ Main page of the build:
   <img src="media/jenkins_page.png" alt="Jenkins" width="800">
 </p>
 <p align="center">
-  <img src="media/jenkins_config.gif" alt="Jenkins" width="800">
+  <img src="media/ jenkins_config.gif" alt="Jenkins">
 </p>
 
 After build is completed, in the <code><strong>*Builds history*</strong></code> opposite the build number will appear
@@ -120,5 +120,7 @@ After the build is completed, a special bot created in <code>Telegram</code>, au
 <p align="center">
 <img src="media/telegram_report.png">
 </p>
+
+[back to Contents ⬆](#TableOfContents)
 
 
