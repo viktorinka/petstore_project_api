@@ -5,7 +5,7 @@
     "environment": "api tests",
     "comment": "",
     "reportLink": "https://jenkins.autotests.cloud",
-    "language": "ru",
+    "language": "en",
     "allureFolder": "allure-report",
     "enableChart": true
   },
