@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/Welcome6Element"
+  },
+  "definitions": {
+    "Welcome6Element": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "category": {
+          "$ref": "#/definitions/Category"
+        },
+        "name": {
+          "type": "string"
+        },
+        "photoUrls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "qt-uri-protocols": [
+              "https"
+            ],
+            "qt-uri-extensions": [
+              ".jpg"
+            ]
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        },
+        "status": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "status",
+        "tags"
+      ],
+      "title": "Welcome6Element"
+    },
+    "Category": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "Category"
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "pending"
+      ],
+      "title": "Status"
+    }
+  }
+}
